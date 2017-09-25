@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banner</title>
+    <meta charset="utf-8">
+</head>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../build/main.bundle.js"></script>
+<style type="text/css">
+    label {
+        display: block;
+        width: 300px;
+        clear: both;
+        margin-bottom: 5px;
+    }
+    input {
+        float: right;
+    }
+
+    #view {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateY(50%) translateX(50%);
+    }
+
+    .layer {
+        position: absolute;
+        opacity: 1;
+    }
+
+    #text-output {
+        position: absolute;
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        z-index: 1;
+        text-align:center;
+    }
+</style>
+<body>
+    <div id="root"></div>
+</body>
+<script>
+    $(function() {
+        var banner = new Banner({
+            root: '#root',
+            elemCount: 9,
+            fontSize: 21,
+            textRotation: 7,
+            elemBgColor: '#265fef',
+            textInput: 'Here is some sample text—update values on the left to change the banner’s appearance',
+        })
+    })
+</script>
+</html>
